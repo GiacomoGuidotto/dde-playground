@@ -1,3 +1,8 @@
+#
+# to use:
+#   conda env create -f environment.yaml
+#   conda activate tf
+#
 name: tf
 channels:
   - conda-forge
