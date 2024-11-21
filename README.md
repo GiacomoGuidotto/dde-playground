@@ -1,15 +1,17 @@
 # DeepXDE Playground
 
-> This repository use `conda` to manage the environment.  
-> If you don't have it installed, the [Miniforge](https://github.com/conda-forge/miniforge) distribution is recommended.
-
-Start by initializing the conda environment.
+To use conda environments:
 ```bash
 conda env create -f environment.yaml
 conda activate tf
 ```
 
-Then, start the Jupyter notebook.
+To update the existing conda environment:
 ```bash
-jupyter notebook
+conda env update -f environment.yaml --prune
+```
+
+To update the environment.yaml file:
+```bash
+conda env export --no-builds | grep -v "^prefix: " > environment.yaml
 ```
